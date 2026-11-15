@@ -24,16 +24,21 @@
   }
 
   &__inner {
+    width: 100%;
     display: grid;
     gap: 36px;
     position: relative;
   }
 
   h1 {
-    font: 400 clamp(44px, 6vw, 88px)/1.04 $serif;
+    font: 400 clamp(44px, 6vw, 88px)/1.06 $serif;
     letter-spacing: -0.015em;
     margin: 0;
-    max-width: 15ch;
+    max-width: 16ch;
+
+    .nowrap {
+      white-space: nowrap;
+    }
 
     em {
       font-style: italic;

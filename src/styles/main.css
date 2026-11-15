@@ -193,15 +193,19 @@ a {
   z-index: -1;
 }
 .hero__inner {
+  width: 100%;
   display: grid;
   gap: 36px;
   position: relative;
 }
 .hero h1 {
-  font: 400 clamp(44px, 6vw, 88px)/1.04 "DM Serif Display", Georgia, serif;
+  font: 400 clamp(44px, 6vw, 88px)/1.06 "DM Serif Display", Georgia, serif;
   letter-spacing: -0.015em;
   margin: 0;
-  max-width: 15ch;
+  max-width: 16ch;
+}
+.hero h1 .nowrap {
+  white-space: nowrap;
 }
 .hero h1 em {
   font-style: italic;
@@ -518,6 +522,38 @@ h2 {
   box-shadow: inset 0 1px 0 rgba(233, 231, 228, 0.12);
 }
 
+.prev--img {
+  padding: 0;
+}
+.prev--img .prev__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.prev--nothing .prev__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 25%;
+     object-position: center 25%;
+  filter: brightness(0.88) contrast(1.04);
+}
+
+.prev--2048 {
+  padding: 16px;
+  background: #141208;
+}
+.prev--2048 .prev__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 6px;
+}
+
+.proj:hover .prev__img {
+  transform: scale(1.04);
+}
+
 .pf {
   width: 210px;
   border: 1px solid rgba(233, 231, 228, 0.3);
@@ -550,57 +586,6 @@ h2 {
   border-radius: 5px;
   background: #E9E7E4;
   margin-top: 4px;
-}
-
-.p1 {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, rgba(233, 231, 228, 0.95) 1.3px, transparent 1.8px) 0 0/14px 14px;
-  -webkit-mask: radial-gradient(circle at 50% 50%, #000 20%, rgba(0, 0, 0, 0.45) 95%);
-  mask: radial-gradient(circle at 50% 50%, #000 20%, rgba(0, 0, 0, 0.45) 95%);
-}
-
-.p1w {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font: 400 30px/1 "Space Mono", ui-monospace, monospace;
-  color: #E9E7E4;
-}
-.p1w span {
-  color: #EC058E;
-}
-
-.t2 {
-  display: grid;
-  grid-template-columns: repeat(4, 44px);
-  gap: 6px;
-}
-.t2 i {
-  height: 44px;
-  border-radius: 6px;
-  background: rgba(233, 231, 228, 0.14);
-  border: 1px solid rgba(233, 231, 228, 0.3);
-  display: grid;
-  place-items: center;
-  font: 400 14px/1 "Space Mono", ui-monospace, monospace;
-  font-style: normal;
-  color: #E9E7E4;
-}
-.t2 i.a {
-  background: #4b6016;
-  border-color: rgba(233, 231, 228, 0.4);
-}
-.t2 i.b {
-  background: #4a0a12;
-  border-color: rgba(233, 231, 228, 0.4);
-}
-.t2 i.c {
-  background: #62BBC1;
-  color: #010400;
-  border-color: transparent;
-  box-shadow: 0 0 22px rgba(98, 187, 193, 0.45);
 }
 
 .tags {
