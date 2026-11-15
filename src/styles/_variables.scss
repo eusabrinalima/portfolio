@@ -5,9 +5,64 @@ $off: #E9E7E4;
 $teal: #62BBC1;
 $pink: #EC058E;
 
-$line: rgba(233, 231, 228, 0.14);
-$dim: rgba(233, 231, 228, 0.72);
-
 $serif: 'DM Serif Display', Georgia, serif;
 $sans: 'Manrope', system-ui, sans-serif;
 $mono: 'Space Mono', ui-monospace, monospace;
+
+:root {
+  --bg: #{$black};
+  --fg: #{$off};
+  --dim: rgba(233, 231, 228, 0.72);
+  --muted: rgba(233, 231, 228, 0.55);
+  --soft-em: rgba(233, 231, 228, 0.78);
+  --line: rgba(233, 231, 228, 0.14);
+  --card-bg: rgba(233, 231, 228, 0.035);
+  --header-bg: rgba(1, 4, 0, 0.72);
+  --accent: #{$teal};
+  --accent-bg: rgba(98, 187, 193, 0.06);
+  --accent-border: rgba(98, 187, 193, 0.4);
+  --spark: #{$pink};
+  --btn-bg: #{$off};
+  --btn-fg: #{$black};
+  --btn-shadow: #8f8d8a;
+  --ctrl-bg: rgba(233, 231, 228, 0.04);
+  --ctrl-shadow: rgba(233, 231, 228, 0.14);
+  --glow-top: #{$wine};
+  --glow-bottom: rgba(37, 0, 0, 0.55);
+  --hero-glow: rgba(37, 0, 0, 1);
+  --hero-glow-mid: rgba(37, 0, 0, 0.7);
+  --stack-bg: #{$olive};
+  --stack-fg: #{$off};
+  --stack-muted: rgba(233, 231, 228, 0.72);
+  --stack-chip-bg: rgba(1, 4, 0, 0.28);
+  --stack-border: rgba(233, 231, 228, 0.22);
+}
+
+[data-theme="light"] {
+  --bg: #E9E7E4;
+  --fg: #010400;
+  --dim: rgba(1, 4, 0, 0.74);
+  --muted: rgba(1, 4, 0, 0.55);
+  --soft-em: rgba(1, 4, 0, 0.65);
+  --line: rgba(1, 4, 0, 0.14);
+  --card-bg: rgba(255, 255, 255, 0.65);
+  --header-bg: rgba(233, 231, 228, 0.78);
+  --accent: #1d7a82;
+  --accent-bg: rgba(29, 122, 130, 0.09);
+  --accent-border: rgba(29, 122, 130, 0.45);
+  --spark: #c90478;
+  --btn-bg: #010400;
+  --btn-fg: #E9E7E4;
+  --btn-shadow: #575551;
+  --ctrl-bg: rgba(255, 255, 255, 0.6);
+  --ctrl-shadow: rgba(1, 4, 0, 0.2);
+  --glow-top: rgba(236, 5, 142, 0.14);
+  --glow-bottom: rgba(98, 187, 193, 0.18);
+  --hero-glow: rgba(236, 5, 142, 0.13);
+  --hero-glow-mid: rgba(98, 187, 193, 0.09);
+  --stack-bg: #303E0E;
+  --stack-fg: #E9E7E4;
+  --stack-muted: rgba(233, 231, 228, 0.75);
+  --stack-chip-bg: rgba(1, 4, 0, 0.28);
+  --stack-border: rgba(233, 231, 228, 0.22);
+}
