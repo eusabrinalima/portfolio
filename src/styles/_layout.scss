@@ -6,7 +6,7 @@
   padding: 0 40px;
 
   @media (max-width: 600px) {
-    padding: 0 20px;
+    padding: 0 16px;
   }
 }
 
@@ -24,33 +24,29 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    min-height: 72px;
-    gap: 12px;
+    height: 72px;
+    gap: 16px;
 
-    @media (max-width: 680px) {
-      flex-wrap: wrap;
-      padding-top: 14px;
-      padding-bottom: 14px;
-      row-gap: 12px;
+    @media (max-width: 480px) {
+      height: 64px;
+      gap: 8px;
     }
   }
 
   &__controls {
     display: flex;
     align-items: center;
-    gap: 10px;
-
-    @media (max-width: 680px) {
-      order: 2;
-    }
+    gap: 8px;
+    flex-shrink: 0;
   }
 }
 
 .logo {
   font: 400 24px/1 $serif;
+  flex-shrink: 0;
 
-  @media (max-width: 680px) {
-    order: 1;
+  @media (max-width: 480px) {
+    font-size: 20px;
   }
 }
 
@@ -72,23 +68,26 @@
   }
 
   @media (max-width: 820px) {
-    gap: 20px;
+    gap: 18px;
 
     a {
       font-size: 14px;
     }
   }
 
-  @media (max-width: 680px) {
-    order: 3;
-    width: 100%;
-    justify-content: space-between;
-    padding-top: 10px;
-    border-top: 1px solid var(--line);
-    gap: 12px;
+  @media (max-width: 520px) {
+    gap: 10px;
 
     a {
-      font-size: 13px;
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 390px) {
+    gap: 8px;
+
+    a {
+      font-size: 11px;
     }
   }
 }
@@ -97,9 +96,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  height: 38px;
-  padding: 0 14px;
+  gap: 6px;
+  height: 36px;
+  padding: 0 12px;
   font: 400 12px/1 $mono;
   letter-spacing: 0.04em;
   color: var(--fg);
@@ -111,8 +110,8 @@
   transition: transform 0.08s, box-shadow 0.08s, border-color 0.2s, color 0.2s;
 
   svg {
-    width: 15px;
-    height: 15px;
+    width: 14px;
+    height: 14px;
     fill: none;
     stroke: currentColor;
     stroke-width: 1.6;
@@ -131,8 +130,20 @@
   }
 
   &--icon {
-    width: 38px;
+    width: 36px;
     padding: 0;
+  }
+
+  @media (max-width: 480px) {
+    height: 32px;
+    padding: 0 8px;
+    font-size: 11px;
+    gap: 4px;
+
+    &--icon {
+      width: 32px;
+      padding: 0;
+    }
   }
 }
 
