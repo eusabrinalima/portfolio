@@ -18,23 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Alternância Dark / Light Mode (com salvamento de preferência)
+  // 2. Alternância Dark / Light Mode
   const themeBtn = document.getElementById('theme-toggle');
   const root = document.documentElement;
   const savedTheme = localStorage.getItem('sl-theme') || 'dark';
 
   root.setAttribute('data-theme', savedTheme);
 
-  themeBtn.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('sl-theme', next);
-    themeBtn.setAttribute(
-      'aria-label',
-      next === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro'
-    );
-  });
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('sl-theme', next);
+      themeBtn.setAttribute(
+        'aria-label',
+        next === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro'
+      );
+    });
+  }
 
   // 3. Alternância de Idioma PT / EN
   const translations = {
@@ -153,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function applyLanguage(lang) {
     const dict = translations[lang];
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-    langLabel.textContent = lang === 'pt' ? 'EN' : 'PT';
+    if (langLabel) langLabel.textContent = lang === 'pt' ? 'EN' : 'PT';
 
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const key = el.dataset.i18n;
@@ -168,9 +170,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   applyLanguage(currentLang);
 
-  langBtn.addEventListener('click', () => {
-    currentLang = currentLang === 'pt' ? 'en' : 'pt';
-    localStorage.setItem('sl-lang', currentLang);
-    applyLanguage(currentLang);
-  });
+  if (langBtn) {
+    langBtn.addEventListener('click', () => {
+      currentLang = currentLang === 'pt' ? 'en' : 'pt';
+      localStorage.setItem('sl-lang', currentLang);
+      applyLanguage(currentLang);
+    });
+  }
 });
