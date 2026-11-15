@@ -1,0 +1,232 @@
+.tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.tab {
+  font: 400 13px/1 $mono;
+  letter-spacing: 0.04em;
+  color: $dim;
+  background: rgba(233, 231, 228, 0.035);
+  border: 1px solid $line;
+  border-radius: 10px;
+  padding: 13px 18px;
+  cursor: pointer;
+  box-shadow: 0 3px 0 rgba(233, 231, 228, 0.1);
+  transition: transform 0.08s, box-shadow 0.08s, color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: $off;
+    border-color: rgba(98, 187, 193, 0.5);
+  }
+
+  &[aria-pressed="true"] {
+    background: $off;
+    color: $black;
+    border-color: $off;
+    box-shadow: 0 3px 0 #8f8d8a;
+  }
+
+  &:active,
+  &[aria-pressed="true"]:active {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 transparent;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 28px;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.proj {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(98, 187, 193, 0.45);
+    box-shadow:
+      0 1px 0 rgba(233, 231, 228, 0.08) inset,
+      0 18px 36px -14px rgba(0, 0, 0, 0.9);
+  }
+
+  &__body {
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+
+    h3 {
+      font: 400 26px/1.2 $serif;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+      font-size: 15px;
+      color: $dim;
+    }
+  }
+}
+
+.kind {
+  font: 400 12px/1 $mono;
+  color: rgba(233, 231, 228, 0.55);
+  letter-spacing: 0.06em;
+}
+
+.prev {
+  height: 200px;
+  border-bottom: 1px solid $line;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(85% 100% at 50% 0%, rgba(98, 187, 193, 0.22), transparent 70%),
+    linear-gradient(165deg, #3a0a10 0%, $wine 45%, $black 100%);
+  box-shadow: inset 0 1px 0 rgba(233, 231, 228, 0.12);
+}
+
+.pf {
+  width: 210px;
+  border: 1px solid rgba(233, 231, 228, 0.3);
+  border-radius: 10px;
+  padding: 16px;
+  background: rgba(1, 4, 0, 0.55);
+  display: grid;
+  gap: 9px;
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.8);
+
+  b {
+    font: 400 22px/1 $serif;
+    margin-bottom: 4px;
+  }
+
+  s {
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(233, 231, 228, 0.4);
+    width: 92%;
+    text-decoration: none;
+
+    &.w {
+      width: 55%;
+    }
+  }
+
+  i {
+    display: block;
+    width: 64px;
+    height: 18px;
+    border-radius: 5px;
+    background: $off;
+    margin-top: 4px;
+  }
+}
+
+.p1 {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(233, 231, 228, 0.95) 1.3px, transparent 1.8px) 0 0 / 14px 14px;
+  -webkit-mask: radial-gradient(circle at 50% 50%, #000 20%, rgba(0, 0, 0, 0.45) 95%);
+  mask: radial-gradient(circle at 50% 50%, #000 20%, rgba(0, 0, 0, 0.45) 95%);
+}
+
+.p1w {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font: 400 30px/1 $mono;
+  color: $off;
+
+  span {
+    color: $pink;
+  }
+}
+
+.t2 {
+  display: grid;
+  grid-template-columns: repeat(4, 44px);
+  gap: 6px;
+
+  i {
+    height: 44px;
+    border-radius: 6px;
+    background: rgba(233, 231, 228, 0.14);
+    border: 1px solid rgba(233, 231, 228, 0.3);
+    display: grid;
+    place-items: center;
+    font: 400 14px/1 $mono;
+    font-style: normal;
+    color: $off;
+
+    &.a {
+      background: #4b6016;
+      border-color: rgba(233, 231, 228, 0.4);
+    }
+
+    &.b {
+      background: #4a0a12;
+      border-color: rgba(233, 231, 228, 0.4);
+    }
+
+    &.c {
+      background: $teal;
+      color: $black;
+      border-color: transparent;
+      box-shadow: 0 0 22px rgba(98, 187, 193, 0.45);
+    }
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  span {
+    font: 400 12px/1 $mono;
+    padding: 7px 10px;
+    border: 1px solid $line;
+    border-radius: 6px;
+    color: $off;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 22px;
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 15px;
+  font-weight: 500;
+
+  a {
+    border-bottom: 1px solid $line;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+
+    &:hover {
+      color: $pink;
+      border-color: $pink;
+    }
+  }
+}

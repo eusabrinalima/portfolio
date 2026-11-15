@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sabrina — Desenvolvedora Front-end</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="logo" href="#topo" aria-label="SL, início">SL.</a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#stack">Stack</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <span class="tag"><i></i>STATUS: DISPONÍVEL</span>
+    </div>
+  </header>
+
+  <main id="topo">
+    <div class="wrap">
+
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="hero__glyphs" aria-hidden="true">
+            <svg class="glyph glyph--brace" viewBox="0 0 36 36"><path d="M13 5c-3 0-4 1.5-4 4v4c0 2-1 4-4 5 3 1 4 3 4 5v4c0 2.5 1 4 4 4M23 5c3 0 4 1.5 4 4v4c0 2 1 4 4 5-3 1-4 3-4 5v4c0 2.5-1 4-4 4"/></svg>
+            <svg class="glyph glyph--spark" viewBox="0 0 36 36"><path d="M18 3c1 8 4 11 15 15-11 4-14 7-15 15-1-8-4-11-15-15C14 14 17 11 18 3Z"/></svg>
+          </div>
+          <span class="tag"><i></i>STATUS: DISPONÍVEL</span>
+          <h1>Oi, sou a Sabrina — desenvolvedora <em>Front-end</em> com formação em <em class="soft">Design Gráfico e Digital.</em></h1>
+          <p class="hero__sub">Transformo ideias visuais em interfaces limpas, funcionais e atentas aos pequenos detalhes.</p>
+          <div><a class="btn" href="#projetos">Ver projetos</a></div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true">
+        <svg class="glyph glyph--brace" viewBox="0 0 36 36"><path d="M13 5c-3 0-4 1.5-4 4v4c0 2-1 4-4 5 3 1 4 3 4 5v4c0 2.5 1 4 4 4M23 5c3 0 4 1.5 4 4v4c0 2 1 4 4 5-3 1-4 3-4 5v4c0 2.5-1 4-4 4"/></svg>
+      </div>
+
+      <section id="sobre" class="section">
+        <div class="about">
+          <div class="about__side">
+            <p class="num">01 // Sobre Mim</p>
+            <h2>Do layout ao código.</h2>
+            <div class="card facts">
+              <div><b>Formação</b>Design Gráfico e Digital</div>
+              <div><b>Atuação</b>Desenvolvimento Front-end</div>
+              <div><b>Foco</b>Interfaces limpas e acessíveis</div>
+            </div>
+          </div>
+          <div class="about__txt">
+            <p>Me formei em Design Gráfico e Digital, mas foi na vontade de tirar os layouts da tela estática e ver tudo funcionando de verdade que fui parar no Front-end.</p>
+            <p>Gosto muito dessa sensação de construir algo com código e ver a interface ganhando vida e respondendo a quem usa.</p>
+            <p>Hoje uso desse olhar visual juntamente com HTML5, SCSS e JavaScript para criar páginas bem estruturadas, responsivas e cuidadas nos detalhes.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true">
+        <svg class="glyph glyph--spark" viewBox="0 0 36 36"><path d="M18 3c1 8 4 11 15 15-11 4-14 7-15 15-1-8-4-11-15-15C14 14 17 11 18 3Z"/></svg>
+      </div>
+
+      <section id="projetos" class="section">
+        <p class="num">02 // Projetos Selecionados</p>
+        <h2>Alguns trabalhos recentes.</h2>
+
+        <div class="tabs" role="group" aria-label="Filtrar projetos">
+          <button class="tab" type="button" data-filter="all" aria-pressed="true">[ TODOS ]</button>
+          <button class="tab" type="button" data-filter="autorais" aria-pressed="false">[ AUTORAIS ]</button>
+          <button class="tab" type="button" data-filter="estudos" aria-pressed="false">[ ESTUDOS ]</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="card proj" data-cat="autorais">
+            <div class="prev">
+              <div class="pf" aria-hidden="true"><b>SL.</b><s></s><s class="w"></s><i></i></div>
+            </div>
+            <div class="proj__body">
+              <span class="kind">AUTORAL</span>
+              <h3>Portfólio Pessoal</h3>
+              <p>Este próprio portfólio: direção visual dark, tipografia editorial e layout em página única, do conceito ao código.</p>
+              <div class="tags"><span>HTML5</span><span>SCSS</span><span>JavaScript</span></div>
+              <div class="links">
+                <a href="https://eusabrinalima.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/eusabrinalima/portfolio" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card proj" data-cat="estudos">
+            <div class="prev">
+              <div class="p1" aria-hidden="true"></div>
+              <div class="p1w" aria-hidden="true">N<span>o</span>thing</div>
+            </div>
+            <div class="proj__body">
+              <span class="kind">ESTUDO</span>
+              <h3>Landing Page Nothing</h3>
+              <p>Recriação de uma landing minimalista, com foco em tipografia, ritmo e fidelidade visual.</p>
+              <div class="tags"><span>HTML5</span><span>SCSS</span><span>BEM</span></div>
+              <div class="links">
+                <a href="https://eusabrinalima.github.io/layout_landing-page/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/eusabrinalima/layout_landing-page" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card proj" data-cat="estudos">
+            <div class="prev">
+              <div class="t2" aria-hidden="true">
+                <i class="a">2</i><i></i><i class="b">4</i><i></i>
+                <i></i><i class="a">8</i><i></i><i class="b">16</i>
+                <i class="b">4</i><i></i><i class="c">2048</i><i></i>
+                <i></i><i class="a">2</i><i></i><i>2</i>
+              </div>
+            </div>
+            <div class="proj__body">
+              <span class="kind">ESTUDO</span>
+              <h3>Jogo 2048</h3>
+              <p>Versão do clássico quebra-cabeça numérico, com lógica de movimentação e pontuação.</p>
+              <div class="tags"><span>HTML5</span><span>SCSS</span><span>JavaScript</span></div>
+              <div class="links">
+                <a href="https://eusabrinalima.github.io/js_2048_game/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                <a href="https://github.com/eusabrinalima/js_2048_game" target="_blank" rel="noopener noreferrer">Código</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true">
+        <svg class="glyph glyph--brace" viewBox="0 0 36 36"><path d="M13 5c-3 0-4 1.5-4 4v4c0 2-1 4-4 5 3 1 4 3 4 5v4c0 2.5 1 4 4 4M23 5c3 0 4 1.5 4 4v4c0 2 1 4 4 5-3 1-4 3-4 5v4c0 2.5-1 4-4 4"/></svg>
+      </div>
+
+      <section id="stack" class="section">
+        <div class="stack">
+          <p class="num num--light">03 // Ferramentas &amp; Stack</p>
+          <h2>Do desenho à entrega.</h2>
+          <div class="stack__cols">
+            <div>
+              <h3>Design</h3>
+              <div class="chips">
+                <span>Figma</span>
+                <span>Adobe Photoshop</span>
+                <span>Adobe Illustrator</span>
+                <span>Adobe InDesign</span>
+              </div>
+            </div>
+            <div>
+              <h3>Front-end</h3>
+              <div class="chips">
+                <span>HTML5</span>
+                <span>SCSS / BEM</span>
+                <span>JavaScript</span>
+                <span>Git / GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true">
+        <svg class="glyph glyph--spark" viewBox="0 0 36 36"><path d="M18 3c1 8 4 11 15 15-11 4-14 7-15 15-1-8-4-11-15-15C14 14 17 11 18 3Z"/></svg>
+      </div>
+
+      <section id="contato" class="section contact">
+        <p class="num">04 // Contato</p>
+        <h2>Vamos conversar sobre o seu projeto?</h2>
+        <p>Se você procura alguém para transformar um layout em interface, ou só quer trocar uma ideia, me escreve.</p>
+        <div class="contact__links">
+          <a class="card" href="https://github.com/eusabrinalima" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="card" href="https://www.linkedin.com/in/sabrina-lima-vds/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="card" href="mailto:eusabrinalima.dev@gmail.com">E-mail</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© 2026 Sabrina</span>
+      <span>{ Front-end }</span>
+    </div>
+  </footer>
+
+  <script src="./src/scripts/main.js"></script>
+</body>
+</html>

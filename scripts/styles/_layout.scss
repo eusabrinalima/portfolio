@@ -1,0 +1,128 @@
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: 600px) {
+    padding: 0 20px;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(1, 4, 0, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid $line;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+}
+
+.logo {
+  font: 400 24px/1 $serif;
+}
+
+.nav {
+  display: flex;
+  gap: 36px;
+
+  a {
+    font-size: 15px;
+    color: $dim;
+    padding: 6px 0;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+
+    &:hover {
+      color: $off;
+      border-color: $teal;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    gap: 20px;
+  }
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font: 400 13px/1 $mono;
+  letter-spacing: 0.04em;
+  padding: 9px 14px;
+  border: 1px solid rgba(98, 187, 193, 0.4);
+  border-radius: 999px;
+  color: $teal;
+  background: rgba(98, 187, 193, 0.06);
+  justify-self: start;
+
+  i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: $teal;
+  }
+}
+
+.header .tag {
+  @media (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 0;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: $line;
+  }
+
+  svg {
+    width: 26px;
+    height: 26px;
+    opacity: 0.9;
+  }
+}
+
+.glyph {
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  &--brace {
+    stroke: $teal;
+  }
+
+  &--spark {
+    stroke: $pink;
+  }
+}
+
+.card {
+  background: rgba(233, 231, 228, 0.035);
+  border: 1px solid $line;
+  border-radius: 16px;
+  box-shadow:
+    0 1px 0 rgba(233, 231, 228, 0.06) inset,
+    0 10px 28px -14px rgba(0, 0, 0, 0.8),
+    0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
